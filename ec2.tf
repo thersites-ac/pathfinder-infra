@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "database" {
   ami = "ami-0f57b4cec24530068"
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
   user_data = "${file("user-data.sh")}"
   tags = {
     Name = "db-server"
